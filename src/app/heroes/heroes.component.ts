@@ -22,8 +22,10 @@ export class HeroesComponent implements OnInit {
   // properties
   heroes: Hero[] = HEROES;
 
+  selectedHero: Hero;
+
   handleHeroClick(hero: Hero) {
-    
+    this.selectedHero = hero;
   }
 
   constructor() {}
