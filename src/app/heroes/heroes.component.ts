@@ -3,6 +3,8 @@ import {
   OnInit // lifecycle hook, called shortly after creating a component, good place to put initialization logic
 } from '@angular/core';
 
+import Hero from './Hero';
+
 
 
 // @Component is a decorator fuction that specifies the Angular metadata for the component
@@ -17,7 +19,10 @@ import {
 export class HeroesComponent implements OnInit {
 
   // properties
-  hero = 'Windstorm';
+  hero: Hero = {
+    id: 0,
+    name: 'Windstorm'
+  }
 
   constructor() {}
   ngOnInit() {} // lifecycle hook, called shortly after creating a component, good place to put initialization logic
