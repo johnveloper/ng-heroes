@@ -1,7 +1,7 @@
-<div *ngIf="selectedHero">
-  <h2>{{selectedHero.name | titlecase}} Details</h2>
-  <div>id: {{selectedHero.id}}</div>
+<div *ngIf="hero">
+  <h2>{{hero.name | titlecase}} Details</h2>
+  <div>id: {{hero.id}}</div>
   <div>
-    <label>name: <input [(ngModel)]="selectedHero.name" placeholder="name"/></label>
-  </div>  
+    <label>name: <input [(ngModel)]="hero.name" placeholder="name"/></label>
+  </div>
 </div>
