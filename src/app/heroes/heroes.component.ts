@@ -20,11 +20,6 @@ import HEROES from './HEROES';
 export class HeroesComponent implements OnInit {
 
   // properties
-  hero: Hero = {
-    id: 0,
-    name: 'Windstorm'
-  }
-
   heroes: Hero[] = HEROES;
 
   constructor() {}
