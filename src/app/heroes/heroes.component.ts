@@ -22,6 +22,10 @@ export class HeroesComponent implements OnInit {
   // properties
   heroes: Hero[] = HEROES;
 
+  handleHeroClick(hero: Hero) {
+    
+  }
+
   constructor() {}
   ngOnInit() {} // lifecycle hook, called shortly after creating a component, good place to put initialization logic
 }

@@ -1,4 +1,4 @@
 <h2>Heroes</h2>
-<div *ngFor="let hero of heroes" class="Hero">
+<div *ngFor="let hero of heroes" class="Hero" (click)="handleHeroClick(hero)">
   id: {{hero.id}}, name: {{hero.name}}
 </div>
