@@ -4,6 +4,7 @@ import {
 } from '@angular/core';
 
 import Hero from './Hero';
+import HEROES from './HEROES';
 
 
 
@@ -23,6 +24,8 @@ export class HeroesComponent implements OnInit {
     id: 0,
     name: 'Windstorm'
   }
+
+  heroes: Hero[] = HEROES;
 
   constructor() {}
   ngOnInit() {} // lifecycle hook, called shortly after creating a component, good place to put initialization logic
