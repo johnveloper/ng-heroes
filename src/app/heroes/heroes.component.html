@@ -1,5 +1,10 @@
 <h2>Heroes</h2>
-<div *ngFor="let hero of heroes" class="Hero" (click)="handleHeroClick(hero)">
+<div 
+  *ngFor="let hero of heroes" 
+  class="Hero"
+  [class.Hero--selected]="hero == selectedHero"
+  (click)="handleHeroClick(hero)"
+>
   id: {{hero.id}}, name: {{hero.name | titlecase}}
 </div>
 
