@@ -4,7 +4,7 @@ import {
 } from '@angular/core';
 
 import Hero from './Hero';
-import HEROES from './HEROES';
+import { HeroService } from '../hero.service';
 
 
 
@@ -18,16 +18,20 @@ import HEROES from './HEROES';
 
 
 export class HeroesComponent implements OnInit {
+  constructor(private heroService: HeroService) {}
 
-  // properties
-  heroes: Hero[] = HEROES;
+  heroes: Hero[];
+  selectedHero: Hero;  
 
-  selectedHero: Hero;
+  ngOnInit() {
+    this.getHeroes();
+  }
+
+  getHeroes(): void {
+    this.heroes = this.heroService.getHeroes();
+  }
 
   handleHeroClick(hero: Hero) {
     this.selectedHero = hero;
   }
-
-  constructor() {}
-  ngOnInit() {} // lifecycle hook, called shortly after creating a component, good place to put initialization logic
 }
